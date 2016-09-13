@@ -20,7 +20,8 @@ gulp.task('dev', function() {
   gulp.watch(['**/*.js', '!node_modules/**'],['test', 'lint']);
 });
 
-gulp.task('moduletracker', function() {
+gulp.task('default', function() {
+  console.log('Now tracking all updates & additions to your node modules...');
   gulp.watch(['node_modules/**'],[function(){
     console.log('You added or changed your modules!');
   }]);
