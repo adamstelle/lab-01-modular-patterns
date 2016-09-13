@@ -14,10 +14,9 @@ describe('testing module greet', function(){
         greetings.greet();
       }, 'shoulda thrown that err');
     });
-
-    // Run test using following syntax: "env.Name=[name] mocha"
+    
     it('should process an input from CLI', function() {
-      var name = process.env.NAME;
+      var name = process.argv[2] = 'adam';
       let result = greetings.greet(name);
       assert.ok(result === 'hello ' + name, 'did not take CLI input');
     });
